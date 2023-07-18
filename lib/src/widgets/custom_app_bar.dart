@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
      
      leading: const Icon(Icons.catching_pokemon_rounded),
-      actions:actionsList ,
+      actions:actionsList  ,
     );
   }
   
