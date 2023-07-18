@@ -14,6 +14,7 @@ class LoginScreen extends StatelessWidget {
               flex: 4,
               child: Container(
                 decoration: const BoxDecoration(color: Colors.deepOrangeAccent),
+                child:const Center(child:  Column(mainAxisAlignment: MainAxisAlignment.start,children: [ Icon(Icons.camera,size: 190, color: Colors.white,),Text('GladconApp', style: TextStyle(fontSize: 40, color: Colors.white),)]))
               ),
             ),
             Expanded(
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 45, horizontal: 20),
               child: Container(
-                height: 300,
+                height: 400,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
@@ -47,6 +48,8 @@ class LoginScreen extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        const Text('Inicio de sesion', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),),
+                        const SizedBox(height: 40,),
                         TextField(
                           decoration: InputDecoration(
                             contentPadding: const EdgeInsets.symmetric(
@@ -97,20 +100,25 @@ class LoginScreen extends StatelessWidget {
                               floatingLabelStyle:
                                   const TextStyle(color: Colors.orangeAccent)),
                         ),
-                        TextButton(
-                         style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.red),
-                            shape: MaterialStateProperty.all(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0),
+                        const SizedBox(height: 20,),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 60,
+                          child: TextButton(
+                           style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(Colors.deepOrangeAccent),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
                               ),
-                            ),
-                        ),
-
-                          onPressed: () {
-                          
-                          },
-                          child: const Text('Ingresar', style: TextStyle(color: Colors.white),))
+                          ),
+                        
+                            onPressed: () {
+                            Navigator.pushNamed(context, '/home');
+                            },
+                            child: const Text('Ingresar', style: TextStyle(color: Colors.white),)),
+                        )
                       ],
                     ),
                   ),

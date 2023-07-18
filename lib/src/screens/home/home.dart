@@ -11,13 +11,10 @@ class HomeScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar:
-          CustomAppBar(
-            title: 'hola',
-            leading: 'adios',
-            actionsList: <Widget>[
+          CustomAppBar(title: 'GladconApp',  actionsList: <Widget>[
         IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.share),
+          icon: const Icon(Icons.settings),
           tooltip: 'Soy un bsutun',
         )
       ]),
@@ -30,29 +27,46 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.deepOrange,
                     width: double.maxFinite,
                     height: size.height / 5,
-                    child: const Text('rta')),
+                    child: const Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                        child: Text(
+                          'Bienvenido deriandar',
+                          style: TextStyle(fontSize: 35, color: Colors.white),
+                        ))),
                 Column(
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 5, horizontal: 10),
                       child: Container(
-                        margin: EdgeInsets.only(top: size.height / 10),
-                        width: size.width,
-                        height: size.height / 4,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 5,
-                                blurRadius: 7,
-                                offset: const Offset(0, 3),
-                              )
-                            ]),
-                        child: const Text('Soy un text'),
-                      ),
+                          margin: EdgeInsets.only(top: size.height / 12),
+                          width: size.width,
+                          height: size.height / 6,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 5,
+                                  blurRadius: 7,
+                                  offset: const Offset(0, 3),
+                                )
+                              ]),
+                          child: const Padding(
+                             padding:  EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                            child:  Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                
+                                Text('Id  0d123123123123', style: TextStyle(fontSize: 25,),),
+                                SizedBox(height: 15,),
+                                Text('Token generado', style: TextStyle(fontSize: 18,color: Color.fromARGB(255, 121, 121, 121) ),),
+                              ],
+                            ),
+                          )),
                     )
                   ],
                 ),
@@ -61,11 +75,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Center(
-                child: Text(
-              'Menu de menus',
-              style: (TextStyle(fontSize: 40, fontWeight: FontWeight.w700)),
-            )),
+          
             const SizedBox(
               height: 20,
             ),
@@ -85,6 +95,14 @@ class HomeScreen extends StatelessWidget {
                       description: 'Soy una descripcion',
                       img: 'assets/narrruto.jpg'),
                   CardMenu(
+                      title: 'Soy un tile',
+                      description: 'Soy una descripcion',
+                      img: 'assets/narrruto.jpg'),
+                       CardMenu(
+                      title: 'Soy un tile',
+                      description: 'Soy una descripcion',
+                      img: 'assets/narrruto.jpg'),
+                       CardMenu(
                       title: 'Soy un tile',
                       description: 'Soy una descripcion',
                       img: 'assets/narrruto.jpg'),

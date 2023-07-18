@@ -20,7 +20,7 @@ class CardMenu extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           developer.log('SOy un faking log');
-           Navigator.pushNamed(context, '/home');
+           Navigator.pushNamed(context, '/');
         },
         child: Container(
             width: size.width,

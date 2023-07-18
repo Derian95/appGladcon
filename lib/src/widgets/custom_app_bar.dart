@@ -9,13 +9,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      centerTitle: true,
-      title:  title != null ? Text(title!): null,
+      centerTitle: false,
+      title:  title != null ? Text(title!, textAlign: TextAlign.start,): null,
       backgroundColor: Colors.deepOrange,
       elevation: 0,
-      leading:  Center(
-        child: leading != null ? Text(leading!) : null,
-      ),
+     
+     leading: const Icon(Icons.catching_pokemon_rounded),
       actions:actionsList ,
     );
   }
