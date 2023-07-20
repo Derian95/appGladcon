@@ -1,4 +1,3 @@
-import 'dart:developer' as developer;
 import 'package:flutter/material.dart';
 
 class CardMenu extends StatelessWidget {
@@ -29,7 +28,7 @@ class CardMenu extends StatelessWidget {
               height: 120,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                   boxShadow: [
                     BoxShadow(
                         color: const Color.fromARGB(255, 206, 206, 206)

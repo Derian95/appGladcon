@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     Text(
                       'GladconApp',
-                      style: TextStyle(fontSize: 35, color: Colors.white),
+                      style: TextStyle(fontSize: 35, color: Colors.white, fontWeight: FontWeight.w600),
                     )
                   ]),
               Padding(
@@ -194,11 +194,13 @@ class FormLogin extends State<MyCustomForm> {
                 borderRadius: BorderRadius.circular(50.0),
               ),
               labelText: 'Password',
+              
             ),
           ),
           const SizedBox(
             height: 20,
           ),
+          
           SizedBox(
             width: double.infinity,
             height: 60,
@@ -220,7 +222,7 @@ class FormLogin extends State<MyCustomForm> {
                 },
                 child: const Text(
                   'Ingresar',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 )),
           )
         ],
